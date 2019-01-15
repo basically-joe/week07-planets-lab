@@ -7,7 +7,7 @@ const SolarSystem = function(planets) {
 SolarSystem.prototype.bindEvents = function () {
   PubSub.subscribe('HyperlinkView:click-submitted', (event) => {
     const inputClick = event.detail;
-    console.log('payload received in SolarSystem:', inputClick);
+    // console.log('payload received in SolarSystem:', inputClick);
     const result = this.getPlanet(inputClick);
     PubSub.publish('SolarSystem:result-calculated', result);
   });
@@ -16,13 +16,13 @@ SolarSystem.prototype.bindEvents = function () {
 SolarSystem.prototype.getPlanet = function (event) {
   let temporaryVariable = ''
   this.planets.forEach((planet) => {
-    debugger
+    // debugger
     if (planet.name === event) {
       return temporaryVariable = planet;
     }
   })
   return temporaryVariable;
-  console.log('payload received in SolarSystem:', temporaryVariable);
+  // console.log('payload received in SolarSystem:', temporaryVariable);
 };
 
 

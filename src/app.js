@@ -8,9 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   planetsDataModel.bindEvents();
   // console.log(planetsDataModel.planets);
 
-  const hyperlinkView = new HyperlinkView();
-  hyperlinkView.bindEvents();
 
+  const menu = document.querySelector('nav.planets-menu');
+  const menuView = new HyperlinkView(menu);
+  menuView.bindEvents();
 
+  const detailsContainer = document.querySelector('section.planet-details');
+  const planetDetailsView = new PlanetInfoView(detailsContainer);
+  planetDetailsView.bindEvents();
 
 });
