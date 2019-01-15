@@ -1,6 +1,6 @@
 const PubSub = {
   publish: function(channel, payload){
-    console.log('publishing on channel:', channel, payload)
+    // console.log('publishing on channel:', channel, payload)
 
     const event = new CustomEvent(channel, {
       detail: payload
@@ -9,8 +9,8 @@ const PubSub = {
   },
 
   subscribe: function(channel, callback){
-    console.log('subscribing on channel:', channel);
-    
+    // console.log('subscribing on channel:', channel);
+
     document.addEventListener(channel, callback);
   }
 }

@@ -1,5 +1,9 @@
 const PubSub = require('../src/helpers/pub_sub.js');
 
+const PlanetInfoView = function() {
+
+};
+
 PlanetInfoView.prototype.bindEvents = function() {
  PubSub.subscribe('SolarSystem:result-calculated', (event) => {
    const returnedPlanet = event.detail;
@@ -13,4 +17,4 @@ PlanetInfoView.prototype.displayResult = function (result) { // NEW
  resultElement.textContent = result.detail;
 };
 
-module.export = PlanetInfoView;
+module.exports = PlanetInfoView;
