@@ -14,7 +14,7 @@ PlanetInfoView.prototype.bindEvents = function() {
 
 PlanetInfoView.prototype.render = function(planet) {
   // debugger
-  const container = '';
+  this.container.innerHTML = '';
 
   const heading = this.createHeading(planet);
   const infoList = this.createInfoList(planet);
